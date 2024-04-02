@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/opcionesFragment">
+    <fragment
+        android:id="@+id/opcionesFragment"
+        android:name="com.jalfaro.preparacionexamen.views.OpcionesFragment"
+        android:label="OpcionesFragment" >
+        <action
+            android:id="@+id/action_opcionesFragment_to_listadoFragment2"
+            app:destination="@id/listadoFragment2" />
+        <action
+            android:id="@+id/action_opcionesFragment_to_calculadoraFragment"
+            app:destination="@id/calculadoraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listadoFragment2"
+        android:name="com.jalfaro.preparacionexamen.views.ListadoFragment"
+        android:label="ListadoFragment" >
+        <action
+            android:id="@+id/action_listadoFragment2_to_opcionesFragment"
+            app:destination="@id/opcionesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculadoraFragment"
+        android:name="com.jalfaro.preparacionexamen.views.CalculadoraFragment"
+        android:label="CalculadoraFragment" >
+        <action
+            android:id="@+id/action_calculadoraFragment_to_opcionesFragment"
+            app:destination="@id/opcionesFragment" />
+    </fragment>
+</navigation>
